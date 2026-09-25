@@ -1,0 +1,13 @@
+GREENMINDS – DAY 6 TESTING RESULT
+
+1. Backend server: PASS
+2. Frontend opened: PASS
+3. Farmer details entered: PASS
+4. Get AI Advice button: PASS
+5. AI advice generated: PASS
+6. AI response readable: PASS
+7. Major errors found: NONE
+8. Code changes made: NONE
+
+Overall Result:
+GreenMinds frontend, backend, and AI advice flow were tested successfully on Day 6

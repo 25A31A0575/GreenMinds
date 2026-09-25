@@ -1,0 +1,26 @@
+GREEN MINDS – HACKATHON DEMO SCRIPT
+
+Hello everyone.
+
+Our project is called Green Minds.
+Our team name is Agri Innovator.
+
+Green Minds is an AI-powered agricultural assistant for Indian farmers.
+
+The main idea is to provide simple farming guidance based on the farmer's crop, soil, weather, and location details.
+
+First, I enter the farmer's details.
+Then I select the crop, soil, and weather information.
+
+Now I click the Get AI Advice button.
+
+Green Minds sends the information to the AI service.
+The AI processes the information and generates practical farming guidance.
+
+The advice is then displayed on the website.
+
+Our project uses HTML, CSS, JavaScript, Python, Flask, and Gemini AI.
+
+The goal of Green Minds is to make AI-powered farming guidance simple and accessible for Indian farmers.
+
+Thank you.

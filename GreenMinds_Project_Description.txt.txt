@@ -1,0 +1,42 @@
+GREEN MINDS
+
+Project Name:
+Green Minds
+
+Team Name:
+Agri Innovator
+
+Project Tagline:
+AI-powered agricultural assistant for Indian farmers
+
+Problem:
+Farmers may find it difficult to get simple and useful farming guidance based on their crop, soil, weather, and location.
+
+Solution:
+Green Minds is an AI-powered agricultural assistant that provides simple farming guidance using the information entered by the farmer.
+
+Key Features:
+1. AI-powered farming guidance
+2. Crop and soil-based advice
+3. Weather-based suggestions
+4. Location-based farming support
+5. Simple and farmer-friendly interface
+
+How It Works:
+1. The farmer enters their details.
+2. The farmer enters crop, soil, weather, and location information.
+3. The farmer clicks the Get AI Advice button.
+4. Green Minds sends the information to the AI service.
+5. The AI generates farming guidance.
+6. The advice is displayed on the website.
+
+Technology Used:
+- HTML
+- CSS
+- JavaScript
+- Python
+- Flask
+- Gemini AI
+
+Project Goal:
+To provide accessible and easy-to-understand AI-powered farming guidance for Indian farmers.

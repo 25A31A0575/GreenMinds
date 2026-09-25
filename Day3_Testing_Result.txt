@@ -1,0 +1,11 @@
+GREENMINDS – DAY 3 TESTING
+
+1. Website opens: PASS
+2. Farmer details input: PASS
+3. Get AI Advice button: PASS
+4. AI advice appears: PASS
+5. Agriculture advice relevance: PASS
+6. Member 2 frontend testing: PASS
+7. Member 3 unavailable: Tested by Member 1
+
+Overall: Core AI feature is working.

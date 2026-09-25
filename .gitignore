@@ -1,0 +1,30 @@
+# ==============================================================================
+# Green Minds - Git Ignore Configuration
+# Protects your sensitive API keys and ignores local system/cache files
+# ==============================================================================
+
+# CRITICAL: Keep your secret Gemini API key strictly private!
+.env
+.env.local
+.env.*.local
+
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Python virtual environment directories
+venv/
+.venv/
+env/
+ENV/
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# IDE & Editor settings
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
