@@ -97,7 +97,6 @@ GreenMinds/
 ├── Additional_Testing_Results.txt   # Comprehensive automated test suite results
 ├── GreenMinds_Demo_Script.txt.txt   # Presentation and demo script for judges
 ├── GreenMinds_Project_Description.txt.txt # Hackathon project description
-├── README.txt.txt                   # Quick reference text file
 ├── README.md                        # Complete project documentation
 │
 └── screenshots/                     # Visual evidence and application screenshots

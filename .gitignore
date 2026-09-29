@@ -28,3 +28,7 @@ Thumbs.db
 .idea/
 *.sublime-project
 *.sublime-workspace
+
+# Scratch files and redundant drafts
+antttt.txt
+README.txt.txt
