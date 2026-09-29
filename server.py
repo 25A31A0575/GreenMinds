@@ -13,14 +13,14 @@ if hasattr(sys.stdout, "reconfigure"):
 if hasattr(sys.stderr, "reconfigure"):
     sys.stderr.reconfigure(encoding="utf-8")
 
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 from dotenv import load_dotenv
 
 # 1. Load environment variables from the private .env file
 load_dotenv()
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder=".", static_url_path="")
 
 # Enable Cross-Origin Resource Sharing (CORS) so your frontend
 # (index.html) can communicate with this backend server seamlessly
@@ -70,11 +70,20 @@ If important information is missing, clearly say what information is needed.
 
 
 @app.route("/", methods=["GET"])
+def home():
+    """
+    Serves the Green Minds single-page application, or JSON health check
+    if requested with JSON headers or ?format=json.
+    """
+    if "application/json" in request.headers.get("Accept", "") or request.args.get("format") == "json":
+        return health_check()
+    return send_from_directory(".", "index.html")
+
+
+@app.route("/api/health", methods=["GET"])
 def health_check():
     """
-    Simple status check endpoint.
-    Opening http://localhost:5000 in your browser shows if the backend is running
-    and whether the Gemini API key has been configured.
+    Status check endpoint for uptime monitoring and verification.
     """
     api_key = os.getenv("GEMINI_API_KEY")
     is_key_configured = bool(api_key and api_key != "your_actual_gemini_api_key_here")

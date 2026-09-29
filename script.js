@@ -24,8 +24,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const adviceMeta = document.getElementById('adviceMeta');
   const adviceContent = document.getElementById('adviceContent');
 
-  // Backend API URL (Flask server on localhost:5000)
-  const BACKEND_API_URL = 'http://localhost:5000/api/advice';
+  // Backend API URL: dynamically adapts to local development or cloud deployment
+  const BACKEND_API_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+    ? (window.location.port === '5000' ? '/api/advice' : 'http://localhost:5000/api/advice')
+    : '/api/advice';
 
   // Helper: Convert Gemini Markdown to readable HTML
   function renderMarkdownToHtml(markdownText) {
@@ -244,9 +246,11 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     } catch (err) {
       // Network or connection error (e.g. backend server is not running)
-      showError(
-        'Could not connect to the backend server (http://localhost:5000). Please make sure "python server.py" is running in your terminal.'
-      );
+      const connectionErrorMsg =
+        window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+          ? 'Could not connect to the backend server (http://localhost:5000). Please make sure "python server.py" is running in your terminal.'
+          : 'Could not connect to the Green Minds backend service. Please check your internet connection and verify that the server is online.';
+      showError(connectionErrorMsg);
       console.error('Fetch error:', err);
     } finally {
       // Hide loading indicator and re-enable button
