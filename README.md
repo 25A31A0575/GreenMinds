@@ -1,4 +1,4 @@
-﻿# 🌱 Green Minds
+# 🌱 Green Minds
 
 > **Project Tagline:** AI-powered agricultural assistant for Indian farmers  
 > **Team:** Agri Innovator  
@@ -90,9 +90,11 @@ GreenMinds/
 ├── server.py                        # Flask backend server connecting to Gemini API
 ├── requirements.txt                 # Python dependencies list
 ├── GreenMinds_AI_Prompt.txt         # Master AI prompt template guiding Gemini
+├── test_scenarios.py                # Automated end-to-end multi-scenario test suite
 │
 ├── Day3_Testing_Result.txt          # Day 3 hackathon test logs
 ├── Day6_Testing_Result.txt.txt      # Day 6 hackathon verification logs
+├── Additional_Testing_Results.txt   # Comprehensive automated test suite results
 ├── GreenMinds_Demo_Script.txt.txt   # Presentation and demo script for judges
 ├── GreenMinds_Project_Description.txt.txt # Hackathon project description
 ├── README.txt.txt                   # Quick reference text file
@@ -368,6 +370,7 @@ Informational sections detailing the project objectives, core feature capabiliti
 The core functionality of Green Minds has been verified:
 * **Day 3 Testing**: Form submission, AI response generation, and frontend display verified (Status: **PASS**).
 * **Day 6 Testing**: Backend server connectivity, multi-field validation, and Gemini AI response readability verified (Status: **PASS**).
+* **Automated Multi-Scenario Testing**: Automated test suite (`test_scenarios.py`) validating regional diversity (Andhra Pradesh, Maharashtra, Punjab), weather extremes (monsoon, heat, frost), empty payload validation (400 Bad Request), and partial payload resilience (Status: **PASS - 6/6**). Detailed report available in `Additional_Testing_Results.txt`.
 
 ---
 

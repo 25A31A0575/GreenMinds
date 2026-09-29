@@ -1,0 +1,70 @@
+======================================================================
+GREEN MINDS - COMPREHENSIVE AUTOMATED TEST REPORT
+======================================================================
+Execution Date: September 2026
+Test Environment: Windows 11, Python 3.14, Flask, Google Gemini AI (google-genai SDK)
+API Target: http://127.0.0.1:5000
+
+----------------------------------------------------------------------
+TEST SUMMARY
+----------------------------------------------------------------------
+Total Scenarios Run: 6
+Passed: 6
+Failed: 0
+Overall Result: ALL TESTS PASSED [100% SUCCESS]
+
+----------------------------------------------------------------------
+DETAILED SCENARIO RESULTS
+----------------------------------------------------------------------
+
+1. Health Check Endpoint (GET /)
+   - Status: PASS (HTTP 200)
+   - Service: Green Minds Backend
+   - API Key: Configured & Verified
+   - Message: "Backend server is running smoothly!"
+
+2. Scenario 1: Coastal Monsoon Rice (Lakshmi Devi - East Godavari, Andhra Pradesh)
+   - Crop: Rice / Paddy
+   - Soil: Alluvial Soil
+   - Weather: Rainy / Monsoon
+   - Status: PASS (HTTP 200)
+   - Response Time: 10.38 seconds
+   - Advice Generated: 2,740 characters
+   - Validation: Includes culturally respectful greeting ("Lakshmi Devi garu"), drainage management, monsoon weed control, and humidity pest precautions.
+
+3. Scenario 2: Hot & Dry Cotton in Black Soil (Vijay Shinde - Yavatmal, Maharashtra)
+   - Crop: Cotton
+   - Soil: Black Soil / Regur
+   - Weather: Hot & Dry
+   - Status: PASS (HTTP 200)
+   - Response Time: 32.52 seconds
+   - Advice Generated: 2,588 characters
+   - Validation: Includes flower/boll shedding protection, soil cracking prevention, organic mulching, and Vidarbha dryland water conservation.
+
+4. Scenario 3: Winter Frost Mustard (Gurpreet Singh - Ludhiana, Punjab)
+   - Crop: Mustard
+   - Soil: Loamy Soil
+   - Weather: Cold / Winter Frost
+   - Status: PASS (HTTP 200)
+   - Response Time: 15.27 seconds
+   - Advice Generated: 2,576 characters
+   - Validation: Includes culturally authentic greeting ("Sat Sri Akal, Gurpreet Singh ji"), frost management techniques, sulfur nutrient tips, and aphid monitoring.
+
+5. Scenario 4: Empty Payload Validation (Edge Case)
+   - Payload: {}
+   - Status: PASS (HTTP 400 Bad Request)
+   - Error Response: {"error": "No farmer data was received.", "success": false}
+   - Validation: Robust input validation prevents unhandled server exceptions.
+
+6. Scenario 5: Partial Data Resilience (Anil Sharma - Rajasthan)
+   - Provided: Name & State only; Missing: District, Crop, Soil, Weather
+   - Status: PASS (HTTP 200)
+   - Response Time: 15.14 seconds
+   - Advice Generated: 2,299 characters
+   - Validation: Gemini politely requests missing field parameters while offering general regional guidance.
+
+----------------------------------------------------------------------
+CONCLUSION
+----------------------------------------------------------------------
+The Green Minds backend exhibits high resilience, safety adherence, localized cultural awareness, and robust input validation across diverse Indian agricultural contexts.
+======================================================================

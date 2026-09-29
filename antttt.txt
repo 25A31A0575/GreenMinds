@@ -1,0 +1,12 @@
+u have to create a detailed readme file whatever the functionalities and feature that has been implemrented or updated so far
+
+u have to create a github repo for it and give that github repo link by the address bar to the antigravity
+
+u have to push all the files and folders and whatever the contents  is needed to be pushed in that github repo by telling the antigravity to do that and 
+
+that u have to upload the screenshots in the batch of five-five in the antigravity that whatever it is needed to insert in the readme file accordingly
+
+
+
+
+
