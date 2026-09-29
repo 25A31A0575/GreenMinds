@@ -2,6 +2,7 @@
 
 > **Project Tagline:** AI-powered agricultural assistant for Indian farmers  
 > **Team:** Agri Innovator  
+> **Live Web App:** [https://greenminds-wzb4.onrender.com](https://greenminds-wzb4.onrender.com)  
 > **Repository:** [https://github.com/25A31A0575/GreenMinds](https://github.com/25A31A0575/GreenMinds)
 
 ---
