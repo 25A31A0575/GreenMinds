@@ -55,6 +55,8 @@ Only features genuinely implemented in the codebase are listed below:
 * **Robust Error Handling:** Dedicated error banner providing user-friendly recovery instructions if the server or API key is unavailable.
 * **Mobile-Responsive Design:** Fully responsive layout with custom CSS breakpoints for seamless usage on smartphones and tablets.
 * **Backend Health Check Endpoint:** Live status indicator at the server root (`/`) confirming server health and API key configuration.
+* **Cross-Platform Console Compatibility:** Native UTF-8 stream reconfiguration preventing Windows console encoding errors when printing status emojis.
+* **Automated Multi-Scenario Test Suite:** Pre-configured automated regression suite testing regional diversity, extreme weather, and edge cases.
 
 ---
 
@@ -70,6 +72,7 @@ Only features genuinely implemented in the codebase are listed below:
 * **Python 3:** Core programming language.
 * **Flask:** Lightweight WSGI web application framework serving API endpoints.
 * **Flask-CORS:** Cross-Origin Resource Sharing handling between frontend and backend.
+* **Gunicorn:** Production-grade WSGI HTTP server for scalable deployment.
 * **python-dotenv:** Secure management of environment variables without leaking credentials.
 
 ### AI & Cloud
@@ -88,7 +91,7 @@ GreenMinds/
 ├── style.css                        # Design system, theme colors, and responsive CSS
 ├── script.js                        # Frontend logic, validation, API call, and markdown parser
 ├── server.py                        # Flask backend server connecting to Gemini API
-├── requirements.txt                 # Python dependencies list
+├── requirements.txt                 # Python dependencies list (Flask, CORS, GenAI, Gunicorn)
 ├── GreenMinds_AI_Prompt.txt         # Master AI prompt template guiding Gemini
 ├── test_scenarios.py                # Automated end-to-end multi-scenario test suite
 │
@@ -113,8 +116,10 @@ GreenMinds/
 * **`style.css`**: Defines the agricultural visual theme (forest greens, mint accents, soft neutrals), input focus states, responsive typography, and mobile-friendly media queries.
 * **`script.js`**: Listens for form events, performs validation on every field, sends a POST request with the farmer payload to Flask, and dynamically parses and renders the AI Markdown advice into clean HTML.
 * **`server.py`**: The Flask application entry point. Implements CORS, reads `.env`, builds the agricultural prompt, and contacts the Google Gemini API with fallback model redundancy.
-* **`requirements.txt`**: Specifies exact Python library versions required to run the backend.
+* **`requirements.txt`**: Specifies exact Python library versions required to run the backend in development and production (with Gunicorn).
 * **`GreenMinds_AI_Prompt.txt`**: Outlines the guidelines given to Gemini, requiring safe, localized, and practical agricultural recommendations.
+* **`test_scenarios.py`**: Automated test suite executing 6 end-to-end agricultural scenarios, input validations, and error resilience checks.
+* **`Additional_Testing_Results.txt`**: Detailed execution log verifying 100% pass rate across multiple Indian regions, crops, and edge cases.
 
 ---
 
@@ -316,6 +321,19 @@ Then visit `http://localhost:8000` in your web browser.
 6. Select current Weather Condition (e.g., `Cloudy / Overcast`).
 7. Click **"Get AI Advice"** and review the personalized guidance!
 
+### Step 4: Run the Automated Multi-Scenario Test Suite
+To verify the full end-to-end AI pipeline across diverse regional contexts, run:
+```bash
+python test_scenarios.py
+```
+This executes automated integration tests against the live backend, validating response schema, cultural greetings, weather precautions, and error handling.
+
+### Step 5: Production Deployment with Gunicorn (Optional)
+For production environments (e.g., Render, Railway, or Linux VPS), run the WSGI server:
+```bash
+gunicorn -w 4 -b 0.0.0.0:5000 server:app
+```
+
 ---
 
 ## 13. Screenshots / Project Evidence
@@ -366,10 +384,21 @@ Informational sections detailing the project objectives, core feature capabiliti
 
 ## 14. Verification & Testing
 
-The core functionality of Green Minds has been verified:
+The core functionality of Green Minds has been extensively verified:
 * **Day 3 Testing**: Form submission, AI response generation, and frontend display verified (Status: **PASS**).
 * **Day 6 Testing**: Backend server connectivity, multi-field validation, and Gemini AI response readability verified (Status: **PASS**).
-* **Automated Multi-Scenario Testing**: Automated test suite (`test_scenarios.py`) validating regional diversity (Andhra Pradesh, Maharashtra, Punjab), weather extremes (monsoon, heat, frost), empty payload validation (400 Bad Request), and partial payload resilience (Status: **PASS - 6/6**). Detailed report available in `Additional_Testing_Results.txt`.
+* **Automated Multi-Scenario Test Suite (`test_scenarios.py`)**: 6 out of 6 end-to-end tests passed (**100% PASS**). Full logs recorded in `Additional_Testing_Results.txt`.
+
+### Automated Scenario Test Results
+
+| # | Test Scenario | Farmer & Region | Tested Parameters | HTTP Status | Response Time | AI Advice Length | Verification Result |
+|---|---|---|---|---|---|---|---|
+| **1** | **Health Check** | System Root | `GET /` | `200 OK` | 0.02s | JSON status | ✅ **PASS** — Confirmed service online & Gemini API key configured. |
+| **2** | **Monsoon Rice** | Lakshmi Devi (East Godavari, AP) | Rice / Alluvial / Rainy Monsoon | `200 OK` | 10.38s | 2,740 chars | ✅ **PASS** — Authentic greeting (*"Lakshmi Devi garu"*), drainage channels, blast disease alerts. |
+| **3** | **Semi-Arid Cotton** | Vijay Shinde (Yavatmal, MH) | Cotton / Black Soil / Hot & Dry | `200 OK` | 32.52s | 2,588 chars | ✅ **PASS** — Localized greeting (*"Vijay Shinde ji"*), boll shedding protection, soil cracking prevention. |
+| **4** | **Winter Frost Mustard** | Gurpreet Singh (Ludhiana, PB) | Mustard / Loamy / Cold Winter Frost | `200 OK` | 15.27s | 2,576 chars | ✅ **PASS** — Punjabi greeting (*"Sat Sri Akal, Gurpreet Singh ji"*), light night irrigation, aphid control. |
+| **5** | **Empty Payload Edge Case** | System | Empty `{}` to `POST /api/advice` | `400 Bad Request` | 0.01s | Error JSON | ✅ **PASS** — Clean validation error message preventing server crash. |
+| **6** | **Partial Data Resilience** | Anil Sharma (Rajasthan) | Name & State only (Missing crop/soil/weather) | `200 OK` | 15.14s | 2,299 chars | ✅ **PASS** — Gracefully identifies missing details and politely asks what is needed. |
 
 ---
 
