@@ -3,7 +3,24 @@
 > **Project Tagline:** AI-powered agricultural assistant for Indian farmers  
 > **Team:** Agri Innovator  
 > **Live Web App:** [https://greenminds-wzb4.onrender.com](https://greenminds-wzb4.onrender.com)  
-> **Repository:** [https://github.com/25A31A0575/GreenMinds](https://github.com/25A31A0575/GreenMinds)
+> **Repository:** [https://github.com/25A31A0575/GreenMinds](https://github.com/25A31A0575/GreenMinds)  
+> **Cloud Deployment:** Hosted on Render (Production WSGI via Gunicorn)
+
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-greenminds--wzb4.onrender.com-2ea44f?style=for-the-badge&logo=render&logoColor=white)](https://greenminds-wzb4.onrender.com)
+[![GitHub Repository](https://img.shields.io/badge/GitHub-25A31A0575%2FGreenMinds-blue?style=for-the-badge&logo=github)](https://github.com/25A31A0575/GreenMinds)
+[![AI Engine](https://img.shields.io/badge/AI-Google%20Gemini-orange?style=for-the-badge&logo=google)](https://aistudio.google.com/)
+
+---
+
+## 🌐 Quick Access (Live Application)
+
+The application is deployed live in the cloud and ready to use immediately:
+
+👉 **[Launch Green Minds Live App](https://greenminds-wzb4.onrender.com)**
+
+* Accessible across desktop and mobile browsers.
+* Connected to Google Gemini Generative AI backend.
+* Live Production Health Check: [https://greenminds-wzb4.onrender.com/api/health](https://greenminds-wzb4.onrender.com/api/health)
 
 ---
 
@@ -163,7 +180,8 @@ The backend is built with Python and **Flask**, serving as a secure gateway betw
 ### API Routes
 
 #### 1. Health Check
-* **Endpoint:** `GET /`
+* **Local Endpoint:** `GET http://localhost:5000/api/health` (or `GET http://localhost:5000/?format=json`)
+* **Live Production Endpoint:** `GET https://greenminds-wzb4.onrender.com/api/health`
 * **Purpose:** Checks whether the backend server is running and whether `GEMINI_API_KEY` is loaded.
 * **Sample Response:**
 ```json
@@ -176,7 +194,8 @@ The backend is built with Python and **Flask**, serving as a secure gateway betw
 ```
 
 #### 2. Get Agricultural Advice
-* **Endpoint:** `POST /api/advice`
+* **Local Endpoint:** `POST http://localhost:5000/api/advice`
+* **Live Production Endpoint:** `POST https://greenminds-wzb4.onrender.com/api/advice`
 * **Purpose:** Accepts farmer inputs, builds prompt, queries Gemini AI, and returns agricultural guidance.
 * **Request Headers:** `Content-Type: application/json`
 * **Request Body Example:**
@@ -255,7 +274,9 @@ PORT=5000
 
 ## 11. Installation and Setup
 
-Follow these beginner-friendly steps to set up the project on your local machine:
+> 💡 **Instant Cloud Access:** If you do not wish to set up Python locally, you can use the live deployed web application immediately at **[https://greenminds-wzb4.onrender.com](https://greenminds-wzb4.onrender.com)**!
+
+For local development and testing, follow these beginner-friendly steps to set up the project on your local machine:
 
 ### Prerequisites
 * **Python 3.10+** installed on your system.
