@@ -123,10 +123,7 @@ GreenMinds/
 └── screenshots/                     # Visual evidence and application screenshots
     ├── 01_Hero_Section.png          # Landing page hero section & feature pills
     ├── 02_Farmer_Information_Form.png # Completed farmer details input form
-    ├── 03_AI_Advice_Result_Part1.png # AI guidance: Summary tags & crop care
-    ├── 04_AI_Advice_Result_Part2.png # AI guidance: Soil nutrients & weather advice
-    ├── 05_AI_Advice_Result_Part3.png # AI guidance: Crop risks & next steps
-    └── 06_About_and_Key_Features.png # Informational footer sections & features
+    └── 03_AI_Advice_Result_Part1.png # AI guidance: Summary tags & crop care
 ```
 
 ### Purpose of Core Files
@@ -358,49 +355,27 @@ gunicorn -w 4 -b 0.0.0.0:5000 server:app
 
 ---
 
-## 13. Screenshots / Project Evidence
+## 13. Project Evidence
 
-Below are actual screenshots demonstrating the implemented Green Minds application.
+Below is visual evidence demonstrating the implemented Green Minds application.
 
 ### Main Interface & Farmer Input
 
 #### Hero Section & Application Overview
-Displays the brand title, mission banner, feature pills, and "Get Started" call-to-action button.
-
 ![Green Minds Hero Section](screenshots/01_Hero_Section.png)
+*Displays the brand title, mission banner, feature pills, and "Get Started" call-to-action button.*
 
 #### Farmer Information Form
-Interactive input form with localized dropdowns for Indian states, districts, crops, soil varieties, and current weather.
-
 ![Farmer Information Input Form](screenshots/02_Farmer_Information_Form.png)
+*Interactive input form with localized dropdowns for Indian states, districts, crops, soil varieties, and current weather.*
 
 ---
 
 ### AI Agricultural Advice Generation
 
-#### Personalized Advice: Summary & Crop Care
-Shows the metadata chips confirming farmer details, followed by tailored Crop Care Advice and Water Management recommendations.
-
+#### Personalized Agricultural Guidance
 ![AI Advice Result - Crop Care & Water Management](screenshots/03_AI_Advice_Result_Part1.png)
-
-#### Personalized Advice: Soil Health & Weather Adaptations
-Details soil nutrient management strategies for specific soil types and actionable weather cautions for cloudy conditions.
-
-![AI Advice Result - Soil Nutrients & Weather](screenshots/04_AI_Advice_Result_Part2.png)
-
-#### Personalized Advice: Crop Risks & Recommended Next Steps
-Outlines potential pest and fungal risks along with concrete next steps for the farmer in the field.
-
-![AI Advice Result - Risks & Next Steps](screenshots/05_AI_Advice_Result_Part3.png)
-
----
-
-### Project Information & Workflow
-
-#### About, Features & How It Works
-Informational sections detailing the project objectives, core feature capabilities, and end-to-end workflow.
-
-![About Green Minds and Key Features](screenshots/06_About_and_Key_Features.png)
+*Shows the metadata chips confirming farmer details, followed by tailored Crop Care Advice and Water Management recommendations.*
 
 ---
 
