@@ -9,6 +9,7 @@
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-greenminds--wzb4.onrender.com-2ea44f?style=for-the-badge&logo=render&logoColor=white)](https://greenminds-wzb4.onrender.com)
 [![GitHub Repository](https://img.shields.io/badge/GitHub-25A31A0575%2FGreenMinds-blue?style=for-the-badge&logo=github)](https://github.com/25A31A0575/GreenMinds)
 [![AI Engine](https://img.shields.io/badge/AI-Google%20Gemini-orange?style=for-the-badge&logo=google)](https://aistudio.google.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 
 ---
 
@@ -118,6 +119,7 @@ GreenMinds/
 ├── Additional_Testing_Results.txt   # Comprehensive automated test suite results
 ├── GreenMinds_Demo_Script.txt.txt   # Presentation and demo script for judges
 ├── GreenMinds_Project_Description.txt.txt # Hackathon project description
+├── LICENSE                          # MIT open-source license
 ├── README.md                        # Complete project documentation
 │
 └── screenshots/                     # Visual evidence and application screenshots
@@ -401,6 +403,6 @@ The core functionality of Green Minds has been extensively verified:
 
 ## 15. License & Acknowledgments
 
-* **License:** Developed for academic and hackathon demonstration purposes.
+* **License:** [MIT License](LICENSE) — This project is open-source and free to use, modify, and distribute.
 * **Team:** Agri Innovator
 * **AI Provider:** Google Gemini API
